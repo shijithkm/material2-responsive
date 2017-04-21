@@ -1,0 +1,65 @@
+<div fxLayout="column" fxFlex [class.dark-theme]="isDarkTheme">
+
+  <md-toolbar color="primary">
+
+    <button md-icon-button (click)="leftMenu.toggle()">
+    <md-icon   class="md-24">menu</md-icon>
+    </button>
+
+    <span>Material2-Responsive</span>
+
+    <!-- Filler that pushes the menu button to the end of the toolbar -->
+    <span fxFlex></span>
+
+    <button md-icon-button [mdMenuTriggerFor]="themeMenu">
+      <md-icon>more_vert</md-icon>
+    </button>
+
+  </md-toolbar>
+
+  <md-sidenav-container fxFlex>
+
+    <md-sidenav #leftMenu mode="over">
+
+      <md-nav-list>
+
+        <md-list-item>
+          <a md-icon-button routerLink="template1">
+            <md-icon>&#xE8EA;</md-icon> Template-1
+          </a>
+        </md-list-item>
+      </md-nav-list>
+
+    </md-sidenav>
+
+    <div class="content" fxLayoutAlign="center top" fxLayout="row" fxLayout.sm="column" fxLayout.xs="column" fxLayoutGap="10px">
+
+      <md-card fxFlex="50">
+        <p>Form-1</p>
+        <p>Form-1</p>
+        <p>Form-1</p>
+        <p>Form-1</p>
+        <p>Form-1</p>
+      </md-card>
+
+      <md-card fxFlex="20" fxLayout="column" fxLayoutGap="10px">
+
+        <p>Form-1 Details</p>
+        <p>Form-1 Details</p>
+        <p>Form-1 Details</p>
+        <p>Form-1 Details</p>
+        <p>Form-1 Details</p>
+        <p>Form-1 Details</p>
+        <p>Form-1 Details</p>
+
+      </md-card>
+
+    </div>
+
+  </md-sidenav-container>
+
+  <md-menu #themeMenu x-position="before">
+    <button md-menu-item (click)="isDarkTheme = !isDarkTheme">Toggle Theme</button>
+  </md-menu>
+
+</div>
