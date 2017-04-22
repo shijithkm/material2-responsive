@@ -24,39 +24,38 @@
       <md-nav-list>
 
         <md-list-item>
-          <a md-icon-button routerLink="template1">
+          <a md-icon-button routerLink="/template1">
             <md-icon>&#xE8EA;</md-icon> Template-1
           </a>
         </md-list-item>
+
+        <md-list-item>
+          <a md-icon-button routerLink="/template2">
+            <md-icon>&#xE8EA;</md-icon> Template-2
+          </a>
+        </md-list-item>
+
       </md-nav-list>
 
     </md-sidenav>
 
-    <div class="content" fxLayoutAlign="center top" fxLayout="row" fxLayout.sm="column" fxLayout.xs="column" fxLayoutGap="10px">
 
-      <md-card fxFlex="50">
-        <p>Form-1</p>
-        <p>Form-1</p>
-        <p>Form-1</p>
-        <p>Form-1</p>
-        <p>Form-1</p>
-      </md-card>
+    <router-outlet></router-outlet>
 
-      <md-card fxFlex="20" fxLayout="column" fxLayoutGap="10px">
-
-        <p>Form-1 Details</p>
-        <p>Form-1 Details</p>
-        <p>Form-1 Details</p>
-        <p>Form-1 Details</p>
-        <p>Form-1 Details</p>
-        <p>Form-1 Details</p>
-        <p>Form-1 Details</p>
-
-      </md-card>
-
-    </div>
 
   </md-sidenav-container>
+
+  <md-toolbar>
+
+    <md-nav-list dense>
+      <a md-list-item href="">About Us</a>
+      <a md-list-item href=""></a>
+    </md-nav-list>
+
+  </md-toolbar>
+
+
+
 
   <md-menu #themeMenu x-position="before">
     <button md-menu-item (click)="isDarkTheme = !isDarkTheme">Toggle Theme</button>
